@@ -38,7 +38,8 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font-body);background:var(--black);color:#fff;overflow:hidden;height:100vh;}
+body{font-family:var(--font-body);background:var(--black);color:#fff;overflow:hidden;height:100vh;z-index:0;position:relative;}
+body::before{content:'';position:fixed;inset:0;background-image:url('your-background-image.jpg');background-size:cover;background-position:center;opacity:0.2;z-index:-1;pointer-events:none;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
 button{cursor:pointer;font-family:var(--font-ui);border:none;outline:none;}
